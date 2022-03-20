@@ -1,9 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
-  <Transactions>
-    <Transaction>2022/03/19 18:17:17.850,=C:\Users\Vinicius\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2022/03/19 18:18:50.157,R:\CursoRauter\ProjetoDelphi\uPrincipal.pas=C:\Users\Vinicius\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2022/03/19 18:18:50.157,R:\CursoRauter\ProjetoDelphi\uPrincipal.dfm=C:\Users\Vinicius\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
-    <Transaction>2022/03/19 18:19:45.963,R:\CursoRauter\ProjetoDelphi\Vendas.dproj=C:\Users\Vinicius\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+	<Transactions>
+    <Transaction>2022/03/19 18:17:17.000.850,=C:\Users\Vinicius\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/03/19 18:18:50.000.157,R:\CursoRauter\ProjetoDelphi\uPrincipal.dfm=C:\Users\Vinicius\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2022/03/19 18:18:50.000.157,R:\CursoRauter\ProjetoDelphi\uPrincipal.pas=C:\Users\Vinicius\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/03/19 18:19:45.000.963,R:\CursoRauter\ProjetoDelphi\Vendas.dproj=C:\Users\Vinicius\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2022/03/19 18:47:19.000.534,=R:\CursoRauter\ProjetoDelphi\Unit1.pas</Transaction>
+    <Transaction>2022/03/19 18:48:21.000.289,R:\CursoRauter\ProjetoDelphi\Unit1.pas=R:\CursoRauter\ProjetoDelphi\datamodule.pas</Transaction>
+    <Transaction>2022/03/19 18:48:21.000.289,R:\CursoRauter\ProjetoDelphi\Unit1.dfm=R:\CursoRauter\ProjetoDelphi\datamodule.dfm</Transaction>
+    <Transaction>2022/03/19 18:49:32.000.590,=R:\CursoRauter\ProjetoDelphi\Unit1.pas</Transaction>
+    <Transaction>2022/03/19 18:50:36.000.460,R:\CursoRauter\ProjetoDelphi\Unit1.pas=R:\CursoRauter\ProjetoDelphi\datamodule\uDTMConexao.pas</Transaction>
+    <Transaction>2022/03/19 18:50:36.000.460,R:\CursoRauter\ProjetoDelphi\Unit1.dfm=R:\CursoRauter\ProjetoDelphi\datamodule\uDTMConexao.dfm</Transaction>
+    <Transaction>2022/03/19 19:32:15.000.126,=R:\CursoRauter\ProjetoDelphi\Unit1.pas</Transaction>
+    <Transaction>2022/03/19 19:35:32.000.448,R:\CursoRauter\ProjetoDelphi\Unit1.pas=R:\CursoRauter\ProjetoDelphi\datamodule\uDTMConexao.pas</Transaction>
+    <Transaction>2022/03/19 19:35:32.000.448,R:\CursoRauter\ProjetoDelphi\Unit1.dfm=R:\CursoRauter\ProjetoDelphi\datamodule\uDTMConexao.dfm</Transaction>
   </Transactions>
 </BorlandProject>

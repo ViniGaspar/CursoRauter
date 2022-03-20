@@ -4,10 +4,28 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, uDTMConexao;
 
 type
-  TForm1 = class(TForm)
+  TfrmPrincipal = class(TForm)
+    mainPrincipal: TMainMenu;
+    CADASTRO1: TMenuItem;
+    MOVIMENTAO1: TMenuItem;
+    RELATRIO1: TMenuItem;
+    CLIENTE1: TMenuItem;
+    N1: TMenuItem;
+    CATEGORIA1: TMenuItem;
+    CATEGORIA2: TMenuItem;
+    N2: TMenuItem;
+    menuFechar: TMenuItem;
+    VENDA1: TMenuItem;
+    CLIENTE2: TMenuItem;
+    N4: TMenuItem;
+    N5: TMenuItem;
+    N6: TMenuItem;
+    N7: TMenuItem;
+    procedure menuFecharClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -15,10 +33,23 @@ type
   end;
 
 var
-  Form1: TForm1;
+  frmPrincipal: TfrmPrincipal;
 
 implementation
 
 {$R *.dfm}
+
+procedure TfrmPrincipal.FormCreate(Sender: TObject);
+begin
+dtmPrincipal := TdtmPrincipal.Create(Self);//Criar formulário
+dtmPrincipal.ConexaoDB.SQLHourGlass:=True; //Mudar ampulheta ao processar DB
+dtmPrincipal.ConexaoDB.Connected:=True;    //Conexão com DB
+end;
+
+procedure TfrmPrincipal.menuFecharClick(Sender: TObject);
+begin
+        //Close Menu
+   Close;
+end;
 
 end.
