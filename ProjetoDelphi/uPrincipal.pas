@@ -41,9 +41,31 @@ implementation
 
 procedure TfrmPrincipal.FormCreate(Sender: TObject);
 begin
-dtmPrincipal := TdtmPrincipal.Create(Self);//Criar formulário
-dtmPrincipal.ConexaoDB.SQLHourGlass:=True; //Mudar ampulheta ao processar DB
-dtmPrincipal.ConexaoDB.Connected:=True;    //Conexão com DB
+{
+dtmPrincipal := TdtmPrincipal.Create(Self);
+dtmPrincipal.ConexaoDB.SQLHourGlass:=True;
+dtmPrincipal.ConexaoDB.Protocol:= 'mssql';
+dtmPrincipal.ConexaoDB.LibraryLocation:='R:\CursoRauter\ProjetoDelphi\ntwdblib.dll';
+dtmPrincipal.ConexaoDB.HostName:= '.\SERVERDELPHI';
+dtmPrincipal.ConexaoDB.Port:=1433;
+dtmPrincipal.ConexaoDB.User:='sa';
+dtmPrincipal.ConexaoDB.Password:='SqlDelphi@123';
+dtmPrincipal.ConexaoDB.Database:='Vendas';
+dtmPrincipal.ConexaoDB.Connected:=True;
+}
+dtmPrincipal := TdtmPrincipal.Create(Self);
+with dtmPrincipal.ConexaoDB do begin
+  SQLHourGlass:=True;
+  Protocol:= 'mssql';
+  LibraryLocation:='R:\CursoRauter\ProjetoDelphi\ntwdblib.dll';
+  HostName:= '.\SERVERDELPHI';
+  Port:=1433;
+  User:='sa';
+  Password:='SqlDelphi@123';
+  Database:='Vendas';
+  Connected:=True;
+end;
+
 end;
 
 procedure TfrmPrincipal.menuFecharClick(Sender: TObject);
