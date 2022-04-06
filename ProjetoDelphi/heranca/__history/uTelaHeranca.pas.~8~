@@ -10,7 +10,14 @@ uses
 
 type
   TfrmTelaHeranca = class(TForm)
+    pgcPrincipal: TPageControl;
     pnlRodape: TPanel;
+    tabListagem: TTabSheet;
+    tabManutencao: TTabSheet;
+    pnlListagemTopo: TPanel;
+    mskPesquisar: TMaskEdit;
+    btnPesquisar: TBitBtn;
+    grdListagem: TDBGrid;
     BitBtn1: TBitBtn;
     BitBtn2: TBitBtn;
     Panel1: TPanel;
@@ -23,13 +30,6 @@ type
     btnFechar: TBitBtn;
     QryListagem: TZQuery;
     dtsListagem: TDataSource;
-    pgcPrincipal: TPageControl;
-    tabManutencao: TTabSheet;
-    tabListagem: TTabSheet;
-    pnlListagemTopo: TPanel;
-    mskPesquisar: TMaskEdit;
-    btnPesquisar: TBitBtn;
-    grdListagem: TDBGrid;
     procedure FormCreate(Sender: TObject);
     procedure btnFecharClick(Sender: TObject);
     procedure btnNovoClick(Sender: TObject);

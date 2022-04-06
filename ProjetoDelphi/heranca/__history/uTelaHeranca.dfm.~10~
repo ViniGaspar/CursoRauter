@@ -16,13 +16,67 @@ object frmTelaHeranca: TfrmTelaHeranca
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
+  object pgcPrincipal: TPageControl
+    Left = 0
+    Top = 0
+    Width = 872
+    Height = 542
+    ActivePage = tabManutencao
+    Align = alClient
+    TabOrder = 0
+    object tabListagem: TTabSheet
+      Caption = 'Listagem'
+    end
+    object tabManutencao: TTabSheet
+      Caption = 'Manuten'#231#227'o'
+      ImageIndex = 1
+      object pnlListagemTopo: TPanel
+        Left = 0
+        Top = 0
+        Width = 864
+        Height = 65
+        Align = alTop
+        TabOrder = 0
+        object mskPesquisar: TMaskEdit
+          Left = 0
+          Top = 23
+          Width = 337
+          Height = 21
+          TabOrder = 0
+          Text = 'Digite sua Pesquisa'
+        end
+        object btnPesquisar: TBitBtn
+          Left = 360
+          Top = 21
+          Width = 105
+          Height = 25
+          Caption = '&PESQUISAR'
+          TabOrder = 1
+        end
+      end
+      object grdListagem: TDBGrid
+        Left = 0
+        Top = 65
+        Width = 864
+        Height = 449
+        Align = alClient
+        DataSource = dtsListagem
+        TabOrder = 1
+        TitleFont.Charset = DEFAULT_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -11
+        TitleFont.Name = 'Tahoma'
+        TitleFont.Style = []
+      end
+    end
+  end
   object pnlRodape: TPanel
     Left = 0
     Top = 542
     Width = 872
     Height = 59
     Align = alBottom
-    TabOrder = 0
+    TabOrder = 1
     object BitBtn1: TBitBtn
       Left = 4
       Top = 16
@@ -109,60 +163,6 @@ object frmTelaHeranca: TfrmTelaHeranca
         VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast]
         TabOrder = 6
       end
-    end
-  end
-  object pgcPrincipal: TPageControl
-    Left = 0
-    Top = 0
-    Width = 872
-    Height = 542
-    ActivePage = tabListagem
-    Align = alClient
-    TabOrder = 1
-    object tabListagem: TTabSheet
-      Caption = 'Listagem'
-      ImageIndex = 1
-      object pnlListagemTopo: TPanel
-        Left = 0
-        Top = 0
-        Width = 864
-        Height = 65
-        Align = alTop
-        TabOrder = 0
-        object mskPesquisar: TMaskEdit
-          Left = 0
-          Top = 23
-          Width = 337
-          Height = 21
-          TabOrder = 0
-          Text = 'Digite sua Pesquisa'
-        end
-        object btnPesquisar: TBitBtn
-          Left = 360
-          Top = 21
-          Width = 105
-          Height = 25
-          Caption = '&PESQUISAR'
-          TabOrder = 1
-        end
-      end
-      object grdListagem: TDBGrid
-        Left = 0
-        Top = 65
-        Width = 864
-        Height = 449
-        Align = alClient
-        DataSource = dtsListagem
-        TabOrder = 1
-        TitleFont.Charset = DEFAULT_CHARSET
-        TitleFont.Color = clWindowText
-        TitleFont.Height = -11
-        TitleFont.Name = 'Tahoma'
-        TitleFont.Style = []
-      end
-    end
-    object tabManutencao: TTabSheet
-      Caption = 'Manuten'#231#227'o'
     end
   end
   object QryListagem: TZQuery
