@@ -24,6 +24,8 @@ object frmTelaHeranca: TfrmTelaHeranca
     ActivePage = tabManutencao
     Align = alClient
     TabOrder = 0
+    ExplicitWidth = 822
+    ExplicitHeight = 526
     object tabListagem: TTabSheet
       Caption = 'Listagem'
     end
@@ -37,6 +39,7 @@ object frmTelaHeranca: TfrmTelaHeranca
         Height = 65
         Align = alTop
         TabOrder = 0
+        ExplicitWidth = 814
         object mskPesquisar: TMaskEdit
           Left = 0
           Top = 23
@@ -77,6 +80,8 @@ object frmTelaHeranca: TfrmTelaHeranca
     Height = 59
     Align = alBottom
     TabOrder = 1
+    ExplicitTop = 526
+    ExplicitWidth = 822
     object BitBtn1: TBitBtn
       Left = 4
       Top = 16
@@ -100,6 +105,7 @@ object frmTelaHeranca: TfrmTelaHeranca
       Height = 59
       Align = alBottom
       TabOrder = 2
+      ExplicitWidth = 820
       object btnNovo: TBitBtn
         Left = 6
         Top = 17
@@ -107,7 +113,6 @@ object frmTelaHeranca: TfrmTelaHeranca
         Height = 25
         Caption = '&NOVO'
         TabOrder = 0
-        OnClick = btnNovoClick
       end
       object btnAlterar: TBitBtn
         Left = 86
@@ -116,7 +121,6 @@ object frmTelaHeranca: TfrmTelaHeranca
         Height = 25
         Caption = '&ALTERAR'
         TabOrder = 1
-        OnClick = btnAlterarClick
       end
       object btnCancelar: TBitBtn
         Left = 167
@@ -125,7 +129,6 @@ object frmTelaHeranca: TfrmTelaHeranca
         Height = 25
         Caption = '&CANCELAR'
         TabOrder = 2
-        OnClick = btnCancelarClick
       end
       object btnGravar: TBitBtn
         Left = 248
@@ -134,7 +137,6 @@ object frmTelaHeranca: TfrmTelaHeranca
         Height = 25
         Caption = '&GRAVAR'
         TabOrder = 3
-        OnClick = btnGravarClick
       end
       object btnApagar: TBitBtn
         Left = 329
@@ -143,7 +145,6 @@ object frmTelaHeranca: TfrmTelaHeranca
         Height = 25
         Caption = 'APAGA&R'
         TabOrder = 4
-        OnClick = btnApagarClick
       end
       object btnFechar: TBitBtn
         Left = 742

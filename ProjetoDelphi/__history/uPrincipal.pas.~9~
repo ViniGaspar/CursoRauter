@@ -4,7 +4,7 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, uDTMConexao, Enter;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, uDTMConexao;
 
 type
   TfrmPrincipal = class(TForm)
@@ -27,10 +27,8 @@ type
     procedure menuFecharClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure CATEGORIA1Click(Sender: TObject);
-    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
-    TeclaEnter: TMREnter;
   public
     { Public declarations }
   end;
@@ -51,19 +49,20 @@ begin
  frmCadCategoria.Release;                        //Apagar na memória//
 end;
 
-procedure TfrmPrincipal.FormClose(Sender: TObject; var Action: TCloseAction);
-begin
-  FreeAndNil(TeclaEnter);
-  FreeAndNil(dtmPrincipal);
-
-
-end;
-
 procedure TfrmPrincipal.FormCreate(Sender: TObject);
 begin
-
-
-
+{
+dtmPrincipal := TdtmPrincipal.Create(Self);
+dtmPrincipal.ConexaoDB.SQLHourGlass:=True;
+dtmPrincipal.ConexaoDB.Protocol:= 'mssql';
+dtmPrincipal.ConexaoDB.LibraryLocation:='R:\CursoRauter\ProjetoDelphi\ntwdblib.dll';
+dtmPrincipal.ConexaoDB.HostName:= '.\SERVERDELPHI';
+dtmPrincipal.ConexaoDB.Port:=1433;
+dtmPrincipal.ConexaoDB.User:='sa';
+dtmPrincipal.ConexaoDB.Password:='SqlDelphi@123';
+dtmPrincipal.ConexaoDB.Database:='Vendas';
+dtmPrincipal.ConexaoDB.Connected:=True;
+}
 dtmPrincipal := TdtmPrincipal.Create(Self);
 with dtmPrincipal.ConexaoDB do begin
   SQLHourGlass:=True;
@@ -76,10 +75,6 @@ with dtmPrincipal.ConexaoDB do begin
   Database:='Vendas';
   Connected:=True;
 end;
-
-  TeclaEnter:= TMREnter.Create(Self);
-  TeclaEnter.FocusEnabled:=true;
-  TeclaEnter.FocusColor:=clInfoBk;
 
 end;
 
