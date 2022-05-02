@@ -130,11 +130,12 @@ begin
   finally
 EstadoDoCadastro:=ecNenhum;
 end;
-end;
 
 procedure TfrmTelaHeranca.FormCreate(Sender: TObject);
 begin
  QryListagem.Connection:=dtmPrincipal.ConexaoDB;
  dtsListagem.DataSet:=QryListagem;
  grdListagem.DataSource:=dtsListagem;
+end;
+
 end;
